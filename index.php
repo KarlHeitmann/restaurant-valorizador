@@ -11,3 +11,9 @@
 // Setup
 define( 'RESTAURANT_VALORIZADOR_PLUGIN_URL', __FILE__);
 
+// Includes
+include( 'blocks/enqueue.php');
+
+// Hooks
+add_action('enqueue_block_editor_assets', 'rv_enqueue_editor_assets');
+add_action('enqueue_block_assets', 'rv_enqueue_block_assets');

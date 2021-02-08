@@ -1,0 +1,27 @@
+.restaurant-valoracion {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  grid-gap: 1rem;
+
+  // box-shadow: 10px 10px 10px rgba(#3C6F8D, 1.0);
+  border: 3px solid #3C6F8D;
+  box-shadow: 10px 10px 1px #3C6F8D;
+  padding: 1rem;
+
+  &__titulo {
+    grid-column: 1 / -1;
+  }
+
+  &__data {
+    display: none;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    &-valoracion {
+      flex-grow: 1;
+    }
+  }
+}
