@@ -119,15 +119,9 @@ registerBlockType('udemy/restaurant-valoracion', {
               Reseña en un vistazo*
             </strong>
           </div>
-          <Item
-            data_item={items[0]}
-          />
-          <Item
-            data_item={items[1]}
-          />
-          <Item
-            data_item={items[2]}
-          />
+          {
+            items.map(item => <Item data_item={item}/>)
+          }
         </div>
       </div>
     ];
@@ -158,15 +152,9 @@ registerBlockType('udemy/restaurant-valoracion', {
               Reseña en un vistazo*
             </strong>
           </div>
-          <Item
-            data_item={items[0]}
-          />
-          <Item
-            data_item={items[1]}
-          />
-          <Item
-            data_item={items[2]}
-          />
+          {
+            items.map(item => <Item data_item={item}/>)
+          }
         </div>
       </div>
     );
