@@ -79,9 +79,19 @@ registerBlockType('udemy/restaurant-valoracion', {
         clase: "restaurant-valoracion__data servicio-ph"
       },
       {
+        cantidad: props.attributes.ubicacion,
+        texto: "Ubicación",
+        clase: "restaurant-valoracion__data ubicacion-ph"
+      },
+      {
         cantidad: props.attributes.calidad,
         texto: "Calidad de la comida",
         clase: "restaurant-valoracion__data calidad-ph"
+      },
+      {
+        cantidad: props.attributes.precio,
+        texto: "Precio",
+        clase: "restaurant-valoracion__data precio-ph"
       }
     ]
     return [
@@ -103,9 +113,21 @@ registerBlockType('udemy/restaurant-valoracion', {
             min={0} max={5}
           />
           <RangeControl
+            label={__('Ubicación', 'restaurant-valorizador')}
+            value={Number(props.attributes.ubicacion)}
+            onChange={ubicacion => { props.setAttributes({ ubicacion })}}
+            min={0} max={5}
+          />
+          <RangeControl
             label={__('Calidad', 'restaurant-valorizador')}
             value={Number(props.attributes.calidad)}
             onChange={calidad => { props.setAttributes({ calidad })}}
+            min={0} max={5}
+          />
+          <RangeControl
+            label={__('Precio', 'restaurant-valorizador')}
+            value={Number(props.attributes.precio)}
+            onChange={precio => { props.setAttributes({ precio })}}
             min={0} max={5}
           />
         </PanelBody>
@@ -151,9 +173,19 @@ registerBlockType('udemy/restaurant-valoracion', {
         clase: "restaurant-valoracion__data servicio-ph"
       },
       {
+        cantidad: props.attributes.ubicacion,
+        texto: "Ubicación",
+        clase: "restaurant-valoracion__data ubicacion-ph"
+      },
+      {
         cantidad: props.attributes.calidad,
         texto: "Calidad de la comida",
         clase: "restaurant-valoracion__data calidad-ph"
+      },
+      {
+        cantidad: props.attributes.precio,
+        texto: "Precio",
+        clase: "restaurant-valoracion__data precio-ph"
       }
     ]
     return (
