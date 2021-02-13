@@ -55,6 +55,23 @@ registerBlockType('udemy/restaurant-valoracion', {
     },
   },
   edit: (props) => {
+    const items = [
+      {
+        cantidad: props.attributes.cantidad,
+        texto: "Cantidad de la comida",
+        clase: "restaurant-valoracion__data cantidad-ph"
+      },
+      {
+        cantidad: props.attributes.servicio,
+        texto: "Servicio",
+        clase: "restaurant-valoracion__data servicio-ph"
+      },
+      {
+        cantidad: props.attributes.calidad,
+        texto: "Calidad de la comida",
+        clase: "restaurant-valoracion__data calidad-ph"
+      }
+    ]
     return [
       <InspectorControls>
         <PanelBody title={__('Resena en un vistazo', 'restaurant-valorizador')}>
@@ -103,25 +120,36 @@ registerBlockType('udemy/restaurant-valoracion', {
             </strong>
           </div>
           <Item
-            cantidad={props.attributes.cantidad}
-            texto={"Cantidad de la comida"}
-            clase={"restaurant-valoracion__data cantidad-ph"}
+            data_item={items[0]}
           />
           <Item
-            cantidad={props.attributes.servicio}
-            texto={"Servicio"}
-            clase={"restaurant-valoracion__data servicio-ph"}
+            data_item={items[1]}
           />
           <Item
-            cantidad={props.attributes.calidad}
-            texto={"Calidad de la comida"}
-            clase={"restaurant-valoracion__data calidad-ph"}
+            data_item={items[2]}
           />
         </div>
       </div>
     ];
   },
   save: (props) => {
+    const items = [
+      {
+        cantidad: props.attributes.cantidad,
+        texto: "Cantidad de la comida",
+        clase: "restaurant-valoracion__data cantidad-ph"
+      },
+      {
+        cantidad: props.attributes.servicio,
+        texto: "Servicio",
+        clase: "restaurant-valoracion__data servicio-ph"
+      },
+      {
+        cantidad: props.attributes.calidad,
+        texto: "Calidad de la comida",
+        clase: "restaurant-valoracion__data calidad-ph"
+      }
+    ]
     return (
       <div className={ `align${props.attributes.block_alignment}`}>
         <div class="restaurant-valoracion">
@@ -131,19 +159,13 @@ registerBlockType('udemy/restaurant-valoracion', {
             </strong>
           </div>
           <Item
-            cantidad={props.attributes.cantidad}
-            texto={"Cantidad de la comida"}
-            clase={"restaurant-valoracion__data cantidad-ph"}
+            data_item={items[0]}
           />
           <Item
-            cantidad={props.attributes.servicio}
-            texto={"Servicio"}
-            clase={"restaurant-valoracion__data servicio-ph"}
+            data_item={items[1]}
           />
           <Item
-            cantidad={props.attributes.calidad}
-            texto={"Calidad de la comida"}
-            clase={"restaurant-valoracion__data calidad-ph"}
+            data_item={items[2]}
           />
         </div>
       </div>

@@ -13,17 +13,22 @@ const icono_star_off = <svg width="24" height="28" viewBox="0 0 24 28" fill="non
 </svg>
 
 function Item(props) {
+  const {
+    cantidad,
+    texto,
+    clase
+  } = props.data_item;
   const temp = [ icono_star_off, icono_star_off, icono_star_off, icono_star_off, icono_star_off ];
-  const calidad_iconos_jsx  = temp.map((element, index) => { return(index < Number(props.cantidad)  ? icono_star : icono_star_off) })
+  const calidad_iconos_jsx  = temp.map((element, index) => { return(index < Number(cantidad)  ? icono_star : icono_star_off) })
   return(
     <div className="restaurant-valoracion__item">
       <div className="restaurant-valoracion__item-texto">
-        {props.texto}
+        {texto}
       </div>
       <div className="restaurant-valoracion__item-valoracion">
         <span
-          className={props.clase}>
-          { props.cantidad }
+          className={clase}>
+          { cantidad }
         </span>
         {
           calidad_iconos_jsx
