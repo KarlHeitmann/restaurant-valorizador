@@ -14,23 +14,8 @@ const {
 const {
   PanelBody,
   PanelRow,
-  TextControl,
-  SelectControl,
   RangeControl,
 } = wp.components;
-
-const icono_star = <svg width="24" height="28" viewbox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M24 27.7846L12 7L0 27.7846H24ZM17.2861 23.8903L11.957 14.6599L6.62776 23.8903H17.2861Z" fill="#3C6F8D"/>
-  <path d="M7 12L5.5 10L12 1L18 10L16.5 11.5L12 4.5L7 12Z" fill="#3C6F8D" stroke="black"/>
-</svg>
-
-const icono_star_off = <svg width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <g opacity="0.1">
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M24 27.7846L12 7L0 27.7846H24ZM17.2861 23.8903L11.957 14.6599L6.62776 23.8903H17.2861Z" fill="#3C6F8D"/>
-    <path d="M7 12L5.5 10L12 1L18 10L16.5 11.5L12 4.5L7 12Z" fill="#3C6F8D" stroke="black"/>
-  </g>
-</svg>
-
 
 registerBlockType('udemy/restaurant-valoracion', {
   title: __('Restaurant valoracion', 'restaurant-valorizador'),
@@ -121,26 +106,22 @@ registerBlockType('udemy/restaurant-valoracion', {
             cantidad={props.attributes.cantidad}
             texto={"Cantidad de la comida"}
             clase={"restaurant-valoracion__data cantidad-ph"}
-            />
+          />
           <Item
             cantidad={props.attributes.servicio}
             texto={"Servicio"}
             clase={"restaurant-valoracion__data servicio-ph"}
-            />
+          />
           <Item
             cantidad={props.attributes.calidad}
             texto={"Calidad de la comida"}
             clase={"restaurant-valoracion__data calidad-ph"}
-            />
+          />
         </div>
       </div>
     ];
   },
   save: (props) => {
-    const temp = [ icono_star_off, icono_star_off, icono_star_off, icono_star_off, icono_star_off ];
-    const cantidad_iconos_jsx = temp.map((element, index) => { return(index < Number(props.attributes.cantidad) ? icono_star : icono_star_off) })
-    const servicio_iconos_jsx = temp.map((element, index) => { return(index < Number(props.attributes.servicio) ? icono_star : icono_star_off) })
-    const calidad_iconos_jsx  = temp.map((element, index) => { return(index < Number(props.attributes.calidad)  ? icono_star : icono_star_off) })
     return (
       <div className={ `align${props.attributes.block_alignment}`}>
         <div class="restaurant-valoracion">
@@ -149,31 +130,21 @@ registerBlockType('udemy/restaurant-valoracion', {
               Reseña en un vistazo*
             </strong>
           </div>
-          <div class="restaurant-valoracion__item">
-            <div class="restaurant-valoracion__item-texto">Cantidad de la comida: </div>
-            <div class="restaurant-valoracion__item-valoracion">
-              <span class="restaurant-valoracion__data cantidad-ph">{ props.attributes.cantidad }</span>
-              {
-                cantidad_iconos_jsx
-              }
-            </div>
-          </div>
-          <div class="restaurant-valoracion__item">
-            <div class="restaurant-valoracion__item-texto">Servicio: </div>
-            <div class="restaurant-valoracion__item-valoracion">
-              <span class="restaurant-valoracion__data servicio-ph">{ props.attributes.servicio }</span>
-              {
-                servicio_iconos_jsx
-              }
-            </div>
-          </div>
-          <div class="restaurant-valoracion__item">
-            <div class="restaurant-valoracion__item-texto">Calidad de la comida: </div>
-            <div class="restaurant-valoracion__item-valoracion">
-              <span class="restaurant-valoracion__data calidad-ph">{ props.attributes.calidad }</span>
-              { calidad_iconos_jsx }
-            </div>
-          </div>
+          <Item
+            cantidad={props.attributes.cantidad}
+            texto={"Cantidad de la comida"}
+            clase={"restaurant-valoracion__data cantidad-ph"}
+          />
+          <Item
+            cantidad={props.attributes.servicio}
+            texto={"Servicio"}
+            clase={"restaurant-valoracion__data servicio-ph"}
+          />
+          <Item
+            cantidad={props.attributes.calidad}
+            texto={"Calidad de la comida"}
+            clase={"restaurant-valoracion__data calidad-ph"}
+          />
         </div>
       </div>
     );
