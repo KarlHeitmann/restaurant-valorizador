@@ -1,14 +1,16 @@
 import React from 'react';
 
 function Item(props) {
+  // const temp = [ icono_star_off, icono_star_off, icono_star_off, icono_star_off, icono_star_off ];
+  // const calidad_iconos_jsx  = temp.map((element, index) => { return(index < Number(props.cantidad)  ? icono_star : icono_star_off) })
   return(
-    <div class="restaurant-valoracion__item">
-      <div class="restaurant-valoracion__item-texto">
+    <div className="restaurant-valoracion__item">
+      <div className="restaurant-valoracion__item-texto">
         {props.texto}
       </div>
-      <div class="restaurant-valoracion__item-valoracion">
-        <span class="restaurant-valoracion__data cantidad-ph">
-          {/* { props.attributes.cantidad } */}
+      <div className="restaurant-valoracion__item-valoracion">
+        <span className="restaurant-valoracion__data cantidad-ph">
+          { props.cantidad }
         </span>
         {
           props.cantidad

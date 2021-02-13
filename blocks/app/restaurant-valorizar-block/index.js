@@ -123,7 +123,7 @@ registerBlockType('udemy/restaurant-valoracion', {
             </strong>
           </div>
           <Item
-            cantidad={3}
+            cantidad={props.attributes.cantidad}
             texto={"Cantidad de la comida"}
             />
           <div class="restaurant-valoracion__item">
