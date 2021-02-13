@@ -1,4 +1,5 @@
 import block_icons from '../icons/index';
+import Item from './item';
 import './editor.scss';
 
 const {registerBlockType} = wp.blocks;
@@ -115,11 +116,16 @@ registerBlockType('udemy/restaurant-valoracion', {
           />
         </BlockControls>
         <div class="restaurant-valoracion">
+          <Item />
           <div class="restaurant-valoracion__titulo">
             <strong>
               Reseña en un vistazo*
             </strong>
           </div>
+          <Item
+            cantidad={3}
+            texto={"Cantidad de la comida"}
+            />
           <div class="restaurant-valoracion__item">
             <div class="restaurant-valoracion__item-texto">Cantidad de la comida: </div>
             <div class="restaurant-valoracion__item-valoracion">
