@@ -120,14 +120,17 @@ registerBlockType('udemy/restaurant-valoracion', {
           <Item
             cantidad={props.attributes.cantidad}
             texto={"Cantidad de la comida"}
+            clase={"restaurant-valoracion__data cantidad-ph"}
             />
           <Item
             cantidad={props.attributes.servicio}
             texto={"Servicio"}
+            clase={"restaurant-valoracion__data servicio-ph"}
             />
           <Item
             cantidad={props.attributes.calidad}
             texto={"Calidad de la comida"}
+            clase={"restaurant-valoracion__data calidad-ph"}
             />
         </div>
       </div>

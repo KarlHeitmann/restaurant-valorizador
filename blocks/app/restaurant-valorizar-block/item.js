@@ -21,7 +21,8 @@ function Item(props) {
         {props.texto}
       </div>
       <div className="restaurant-valoracion__item-valoracion">
-        <span className="restaurant-valoracion__data cantidad-ph">
+        <span
+          className={props.clase}>
           { props.cantidad }
         </span>
         {
