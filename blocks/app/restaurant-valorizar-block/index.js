@@ -47,7 +47,19 @@ registerBlockType('udemy/restaurant-valoracion', {
       default: '2',
       selector: '.servicio-ph'
     },
+    ubicacion: {
+      type: 'string',
+      source: 'text',
+      default: '2',
+      selector: '.calidad-ph'
+    },
     calidad: {
+      type: 'string',
+      source: 'text',
+      default: '2',
+      selector: '.calidad-ph'
+    },
+    precio: {
       type: 'string',
       source: 'text',
       default: '2',
