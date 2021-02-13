@@ -70,10 +70,6 @@ registerBlockType('udemy/restaurant-valoracion', {
     },
   },
   edit: (props) => {
-    const temp = [ icono_star_off, icono_star_off, icono_star_off, icono_star_off, icono_star_off ];
-    const cantidad_iconos_jsx = temp.map((element, index) => { return(index < Number(props.attributes.cantidad) ? icono_star : icono_star_off) })
-    const servicio_iconos_jsx = temp.map((element, index) => { return(index < Number(props.attributes.servicio) ? icono_star : icono_star_off) })
-    const calidad_iconos_jsx  = temp.map((element, index) => { return(index < Number(props.attributes.calidad)  ? icono_star : icono_star_off) })
     return [
       <InspectorControls>
         <PanelBody title={__('Resena en un vistazo', 'restaurant-valorizador')}>
@@ -125,31 +121,14 @@ registerBlockType('udemy/restaurant-valoracion', {
             cantidad={props.attributes.cantidad}
             texto={"Cantidad de la comida"}
             />
-          <div class="restaurant-valoracion__item">
-            <div class="restaurant-valoracion__item-texto">Cantidad de la comida: </div>
-            <div class="restaurant-valoracion__item-valoracion">
-              <span class="restaurant-valoracion__data cantidad-ph">{ props.attributes.cantidad }</span>
-              {
-                cantidad_iconos_jsx
-              }
-            </div>
-          </div>
-          <div class="restaurant-valoracion__item">
-            <div class="restaurant-valoracion__item-texto">Servicio: </div>
-            <div class="restaurant-valoracion__item-valoracion">
-              <span class="restaurant-valoracion__data servicio-ph">{ props.attributes.servicio }</span>
-              {
-                servicio_iconos_jsx
-              }
-            </div>
-          </div>
-          <div class="restaurant-valoracion__item">
-            <div class="restaurant-valoracion__item-texto">Calidad de la comida: </div>
-            <div class="restaurant-valoracion__item-valoracion">
-              <span class="restaurant-valoracion__data calidad-ph">{ props.attributes.calidad }</span>
-              { calidad_iconos_jsx }
-            </div>
-          </div>
+          <Item
+            cantidad={props.attributes.servicio}
+            texto={"Servicio"}
+            />
+          <Item
+            cantidad={props.attributes.calidad}
+            texto={"Calidad de la comida"}
+            />
         </div>
       </div>
     ];
