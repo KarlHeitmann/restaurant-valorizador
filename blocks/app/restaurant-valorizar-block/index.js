@@ -17,16 +17,16 @@ const {
   RangeControl,
 } = wp.components;
 
-registerBlockType('udemy/restaurant-valoracion', {
-  title: __('Restaurant valoracion', 'restaurant-valorizador'),
-  description: __('Provides a valoration for a restaurant service', 'udemy'),
+registerBlockType('udemy/restaurant-valoracion', { // TODO: cambiar este udemy
+  title: __('Valorización de Restaurants', 'restaurant-valorizador'),
+  description: __('Provee de valorización para los servicios de un restaurant', 'restaurant-valorizador'),
   // common, formatting, layout, widgets, embed
   category: 'common',
   // icon: 'dashicons-fullscreen-exit-alt'
   // icon: 'welcome-learn-more',
   icon: block_icons.wapuu,
   keywords: [
-    __('Food', 'restaurant-valorizador'),
+    __('Comida', 'restaurant-valorizador'),
     __('Restaurant', 'restaurant-valorizador'),
     __('Gourmet', 'restaurant-valorizador'),
   ],
@@ -51,7 +51,7 @@ registerBlockType('udemy/restaurant-valoracion', {
       type: 'string',
       source: 'text',
       default: '2',
-      selector: '.calidad-ph'
+      selector: '.ubicacion-ph'
     },
     calidad: {
       type: 'string',
@@ -63,7 +63,7 @@ registerBlockType('udemy/restaurant-valoracion', {
       type: 'string',
       source: 'text',
       default: '2',
-      selector: '.calidad-ph'
+      selector: '.precio-ph'
     },
   },
   edit: (props) => {
@@ -96,9 +96,9 @@ registerBlockType('udemy/restaurant-valoracion', {
     ]
     return [
       <InspectorControls>
-        <PanelBody title={__('Resena en un vistazo', 'restaurant-valorizador')}>
+        <PanelBody title={__('Reseña en un vistazo', 'restaurant-valorizador')}>
           <PanelRow>
-            <p>{__('Configure the contents of your block here', 'restaurant-valorizador')}</p>
+            <p>{__('Valorizaciones del bloque', 'restaurant-valorizador')}</p>
           </PanelRow>
           <RangeControl
             label={__('Cantidad', 'restaurant-valorizador')}
