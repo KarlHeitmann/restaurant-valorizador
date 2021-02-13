@@ -32,7 +32,7 @@ const icono_star_off = <svg width="24" height="28" viewBox="0 0 24 28" fill="non
 
 
 registerBlockType('udemy/restaurant-valoracion', {
-  title: __('Restaurant valoracion', 'recipe'),
+  title: __('Restaurant valoracion', 'restaurant-valorizador'),
   description: __('Provides a valoration for a restaurant service', 'udemy'),
   // common, formatting, layout, widgets, embed
   category: 'common',
@@ -40,9 +40,9 @@ registerBlockType('udemy/restaurant-valoracion', {
   // icon: 'welcome-learn-more',
   icon: block_icons.wapuu,
   keywords: [
-    __('Food', 'recipe'),
-    __('Restaurant', 'recipe'),
-    __('Gourmet', 'recipe'),
+    __('Food', 'restaurant-valorizador'),
+    __('Restaurant', 'restaurant-valorizador'),
+    __('Gourmet', 'restaurant-valorizador'),
   ],
   supports: {
     html: false,
@@ -75,24 +75,24 @@ registerBlockType('udemy/restaurant-valoracion', {
     const calidad_iconos_jsx  = temp.map((element, index) => { return(index < Number(props.attributes.calidad)  ? icono_star : icono_star_off) })
     return [
       <InspectorControls>
-        <PanelBody title={__('Resena en un vistazo', 'recipe')}>
+        <PanelBody title={__('Resena en un vistazo', 'restaurant-valorizador')}>
           <PanelRow>
-            <p>{__('Configure the contents of your block here', 'recipe')}</p>
+            <p>{__('Configure the contents of your block here', 'restaurant-valorizador')}</p>
           </PanelRow>
           <RangeControl
-            label={__('Cantidad', 'recipe')}
+            label={__('Cantidad', 'restaurant-valorizador')}
             value={Number(props.attributes.cantidad)}
             onChange={cantidad => { props.setAttributes({ cantidad })}}
             min={0} max={5}
           />
           <RangeControl
-            label={__('Servicio', 'recipe')}
+            label={__('Servicio', 'restaurant-valorizador')}
             value={Number(props.attributes.servicio)}
             onChange={servicio => { props.setAttributes({ servicio })}}
             min={0} max={5}
           />
           <RangeControl
-            label={__('Calidad', 'recipe')}
+            label={__('Calidad', 'restaurant-valorizador')}
             value={Number(props.attributes.calidad)}
             onChange={calidad => { props.setAttributes({ calidad })}}
             min={0} max={5}
