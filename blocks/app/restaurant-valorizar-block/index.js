@@ -1,6 +1,7 @@
 import block_icons from '../icons/index';
 import Item from './item';
 import './editor.scss';
+import ItemPersonalizable from './item_personalizable';
 
 const {registerBlockType} = wp.blocks;
 const {__} = wp.i18n;
@@ -14,6 +15,7 @@ const {
 const {
   PanelBody,
   PanelRow,
+  TextControl,
   RangeControl,
 } = wp.components;
 
@@ -24,7 +26,7 @@ registerBlockType('udemy/restaurant-valoracion', { // TODO: cambiar este udemy
   category: 'common',
   // icon: 'dashicons-fullscreen-exit-alt'
   // icon: 'welcome-learn-more',
-  icon: block_icons.wapuu,
+  icon: block_icons.nimman,
   keywords: [
     __('Comida', 'restaurant-valorizador'),
     __('Restaurant', 'restaurant-valorizador'),
@@ -64,6 +66,18 @@ registerBlockType('udemy/restaurant-valoracion', { // TODO: cambiar este udemy
       source: 'text',
       default: '2',
       selector: '.precio-ph'
+    },
+    personalizable_caption: {
+      type: 'string',
+      source: 'text',
+      default: '',
+      selector: '.personalizable-caption-ph'
+    },
+    personalizable_value: {
+      type: 'string',
+      source: 'text',
+      default: '2',
+      selector: '.personalizable-value-ph'
     },
   },
   edit: (props) => {
@@ -130,6 +144,17 @@ registerBlockType('udemy/restaurant-valoracion', { // TODO: cambiar este udemy
             onChange={precio => { props.setAttributes({ precio })}}
             min={0} max={5}
           />
+          <TextControl
+            label={__("Texto de valorización personalizable", 'restaurant-valorizador')}
+            value={ props.attributes.personalizable_caption }
+            onChange={ personalizable_caption => { props.setAttributes({ personalizable_caption }) } }
+          />
+          <RangeControl
+            label={__('Valor de item personalizable', 'restaurant-valorizador')}
+            value={Number(props.attributes.personalizable_value)}
+            onChange={ personalizable_value => { props.setAttributes({ personalizable_value })}}
+            min={0} max={5}
+          />
         </PanelBody>
       </InspectorControls>,
       <div className={ props.className }>
@@ -156,6 +181,14 @@ registerBlockType('udemy/restaurant-valoracion', { // TODO: cambiar este udemy
           {
             items.map(item => <Item data_item={item}/>)
           }
+          <ItemPersonalizable
+            data_item={{
+              cantidad: props.attributes.personalizable_value,
+              texto: props.attributes.personalizable_caption,
+              clase_caption: "restaurant-valoracion__data personalizable-caption-ph",
+              clase_value: "restaurant-valoracion__data personalizable-value-ph",
+            }}
+          />
         </div>
       </div>
     ];
@@ -199,6 +232,14 @@ registerBlockType('udemy/restaurant-valoracion', { // TODO: cambiar este udemy
           {
             items.map(item => <Item data_item={item}/>)
           }
+          <ItemPersonalizable
+            data_item={{
+              cantidad: props.attributes.personalizable_value,
+              texto: props.attributes.personalizable_caption,
+              clase_caption: "restaurant-valoracion__data personalizable-caption-ph",
+              clase_value: "restaurant-valoracion__data personalizable-value-ph",
+            }}
+          />
         </div>
       </div>
     );
