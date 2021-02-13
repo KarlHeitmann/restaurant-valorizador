@@ -116,7 +116,6 @@ registerBlockType('udemy/restaurant-valoracion', {
           />
         </BlockControls>
         <div class="restaurant-valoracion">
-          <Item />
           <div class="restaurant-valoracion__titulo">
             <strong>
               Reseña en un vistazo*
