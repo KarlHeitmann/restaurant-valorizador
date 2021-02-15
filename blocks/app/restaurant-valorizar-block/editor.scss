@@ -3,7 +3,15 @@
   justify-items: center;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   grid-gap: 1rem;
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: bold;
   font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.06em;
+
 
   // box-shadow: 10px 10px 10px rgba(#3C6F8D, 1.0);
   border: 3px solid #3C6F8D;
@@ -13,13 +21,35 @@
   &__titulo {
     justify-self: left;
     grid-column: 1 / -1;
+
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: bold;
     font-size: 19px;
+    // font-size: 19px;
+    line-height: 25px;
+    // display: flex;
+    // align-items: center;
+    letter-spacing: 0.06em;
+
+    // color: #000000;
   }
 
   &__footer {
     justify-self: left;
     grid-column: 1 / -1;
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: bold;
+    // font-size: 12px;
     font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+    // display: flex;
+    // align-items: center;
+    letter-spacing: 0.06em;
+    // text-decoration-line: underline;
     text-decoration: underline;
   }
 
