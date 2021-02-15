@@ -175,7 +175,7 @@ registerBlockType('udemy/restaurant-valoracion', { // TODO: cambiar este udemy
         <div class="restaurant-valoracion">
           <div class="restaurant-valoracion__titulo">
             <strong>
-              Reseña en un vistazo*
+              🍽 Reseña en un vistazo*
             </strong>
           </div>
           {
@@ -189,6 +189,11 @@ registerBlockType('udemy/restaurant-valoracion', { // TODO: cambiar este udemy
               clase_value: "restaurant-valoracion__data personalizable-value-ph",
             }}
           />
+          <div class="restaurant-valoracion__footer">
+            <strong>
+              *Conoce el significado de cada puntuación.
+            </strong>
+          </div>
         </div>
       </div>
     ];

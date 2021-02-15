@@ -3,6 +3,7 @@
   justify-items: center;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   grid-gap: 1rem;
+  font-size: 16px;
 
   // box-shadow: 10px 10px 10px rgba(#3C6F8D, 1.0);
   border: 3px solid #3C6F8D;
@@ -10,7 +11,16 @@
   padding: 1rem;
 
   &__titulo {
+    justify-self: left;
     grid-column: 1 / -1;
+    font-size: 19px;
+  }
+
+  &__footer {
+    justify-self: left;
+    grid-column: 1 / -1;
+    font-size: 12px;
+    text-decoration: underline;
   }
 
   &__data {
