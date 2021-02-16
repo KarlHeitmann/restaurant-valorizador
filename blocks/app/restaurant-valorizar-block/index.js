@@ -183,7 +183,7 @@ registerBlockType('udemy/restaurant-valoracion', { // TODO: cambiar este udemy
             }}
           />
         </BlockControls>
-        <div class="restaurant-valoracion">
+        <div class="restaurant-valoracion restaurant-valoracion-v1">
           <div class="restaurant-valoracion__titulo">
             <strong>
               🍽 Reseña en un vistazo*
@@ -241,7 +241,7 @@ registerBlockType('udemy/restaurant-valoracion', { // TODO: cambiar este udemy
     ]
     return (
       <div className={ `align${props.attributes.block_alignment}`}>
-        <div class="restaurant-valoracion">
+        <div class="restaurant-valoracion restaurant-valoracion-v1">
           <div class="restaurant-valoracion__titulo">
             <strong>
               Reseña en un vistazo*
