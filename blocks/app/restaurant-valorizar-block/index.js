@@ -88,6 +88,11 @@ registerBlockType('udemy/restaurant-valoracion', { // TODO: cambiar este udemy
         clase: "restaurant-valoracion__data cantidad-ph"
       },
       {
+        cantidad: props.attributes.calidad,
+        texto: "Calidad de la comida",
+        clase: "restaurant-valoracion__data calidad-ph"
+      },
+      {
         cantidad: props.attributes.servicio,
         texto: "Servicio",
         clase: "restaurant-valoracion__data servicio-ph"
@@ -96,11 +101,6 @@ registerBlockType('udemy/restaurant-valoracion', { // TODO: cambiar este udemy
         cantidad: props.attributes.ubicacion,
         texto: "Ubicación",
         clase: "restaurant-valoracion__data ubicacion-ph"
-      },
-      {
-        cantidad: props.attributes.calidad,
-        texto: "Calidad de la comida",
-        clase: "restaurant-valoracion__data calidad-ph"
       },
       {
         cantidad: props.attributes.precio,
@@ -206,6 +206,11 @@ registerBlockType('udemy/restaurant-valoracion', { // TODO: cambiar este udemy
         clase: "restaurant-valoracion__data cantidad-ph"
       },
       {
+        cantidad: props.attributes.calidad,
+        texto: "Calidad de la comida",
+        clase: "restaurant-valoracion__data calidad-ph"
+      },
+      {
         cantidad: props.attributes.servicio,
         texto: "Servicio",
         clase: "restaurant-valoracion__data servicio-ph"
@@ -214,11 +219,6 @@ registerBlockType('udemy/restaurant-valoracion', { // TODO: cambiar este udemy
         cantidad: props.attributes.ubicacion,
         texto: "Ubicación",
         clase: "restaurant-valoracion__data ubicacion-ph"
-      },
-      {
-        cantidad: props.attributes.calidad,
-        texto: "Calidad de la comida",
-        clase: "restaurant-valoracion__data calidad-ph"
       },
       {
         cantidad: props.attributes.precio,
