@@ -90,27 +90,27 @@ registerBlockType('udemy/restaurant-valoracion', { // TODO: cambiar este udemy
     const items = [
       {
         cantidad: props.attributes.cantidad,
-        texto: "Cantidad de la comida",
+        texto: "Cantidad de la comida:",
         clase: "restaurant-valoracion__data cantidad-ph"
       },
       {
         cantidad: props.attributes.calidad,
-        texto: "Calidad de la comida",
+        texto: "Calidad de la comida:",
         clase: "restaurant-valoracion__data calidad-ph"
       },
       {
         cantidad: props.attributes.servicio,
-        texto: "Servicio",
+        texto: "Servicio:",
         clase: "restaurant-valoracion__data servicio-ph"
       },
       {
         cantidad: props.attributes.ubicacion,
-        texto: "Ubicación",
+        texto: "Ubicación:",
         clase: "restaurant-valoracion__data ubicacion-ph"
       },
       {
         cantidad: props.attributes.precio,
-        texto: "Precio",
+        texto: "Precio:",
         clase: "restaurant-valoracion__data precio-ph"
       }
     ]
@@ -213,27 +213,27 @@ registerBlockType('udemy/restaurant-valoracion', { // TODO: cambiar este udemy
     const items = [
       {
         cantidad: props.attributes.cantidad,
-        texto: "Cantidad de la comida",
+        texto: "Cantidad de la comida:",
         clase: "restaurant-valoracion__data cantidad-ph"
       },
       {
         cantidad: props.attributes.calidad,
-        texto: "Calidad de la comida",
+        texto: "Calidad de la comida:",
         clase: "restaurant-valoracion__data calidad-ph"
       },
       {
         cantidad: props.attributes.servicio,
-        texto: "Servicio",
+        texto: "Servicio:",
         clase: "restaurant-valoracion__data servicio-ph"
       },
       {
         cantidad: props.attributes.ubicacion,
-        texto: "Ubicación",
+        texto: "Ubicación:",
         clase: "restaurant-valoracion__data ubicacion-ph"
       },
       {
         cantidad: props.attributes.precio,
-        texto: "Precio",
+        texto: "Precio:",
         clase: "restaurant-valoracion__data precio-ph"
       }
     ]
