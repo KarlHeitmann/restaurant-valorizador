@@ -192,14 +192,16 @@ registerBlockType('udemy/restaurant-valoracion', { // TODO: cambiar este udemy
           {
             items.map(item => <Item data_item={item}/>)
           }
-          <ItemPersonalizable
-            data_item={{
-              cantidad: props.attributes.personalizable_value,
-              texto: props.attributes.personalizable_caption,
-              clase_caption: "restaurant-valoracion__data personalizable-caption-ph",
-              clase_value: "restaurant-valoracion__data personalizable-value-ph",
-            }}
-          />
+          {
+            props.attributes.personalizable_caption != '' && <ItemPersonalizable
+              data_item={{
+                cantidad: props.attributes.personalizable_value,
+                texto: props.attributes.personalizable_caption,
+                clase_caption: "restaurant-valoracion__data personalizable-caption-ph",
+                clase_value: "restaurant-valoracion__data personalizable-value-ph",
+              }}
+            />
+          }
           <div class="restaurant-valoracion__footer">
             <a href={props.attributes.link_mas}>
               *Conoce el significado de cada puntuación.
@@ -248,14 +250,16 @@ registerBlockType('udemy/restaurant-valoracion', { // TODO: cambiar este udemy
           {
             items.map(item => <Item data_item={item}/>)
           }
-          <ItemPersonalizable
-            data_item={{
-              cantidad: props.attributes.personalizable_value,
-              texto: props.attributes.personalizable_caption,
-              clase_caption: "restaurant-valoracion__data personalizable-caption-ph",
-              clase_value: "restaurant-valoracion__data personalizable-value-ph",
-            }}
-          />
+          {
+            props.attributes.personalizable_caption != '' && <ItemPersonalizable
+              data_item={{
+                cantidad: props.attributes.personalizable_value,
+                texto: props.attributes.personalizable_caption,
+                clase_caption: "restaurant-valoracion__data personalizable-caption-ph",
+                clase_value: "restaurant-valoracion__data personalizable-value-ph",
+              }}
+            />
+          }
           <div class="restaurant-valoracion__footer">
             <a href={props.attributes.link_mas}>
               *Conoce el significado de cada puntuación.
