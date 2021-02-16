@@ -21,4 +21,4 @@ Compilar la aplicación usando el comando
 # TODO
 
 - Cambiar icono por el PNG
-- Agregar link en footer a la pagina solicitada
+- OK Agregar link en footer a la pagina solicitada

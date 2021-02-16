@@ -17,7 +17,7 @@ function Item(props) {
     cantidad,
     texto,
     clase
-  } = props.data_item;
+  } = props.data_item; //
   const temp = [ icono_star_off, icono_star_off, icono_star_off, icono_star_off, icono_star_off ];
   const calidad_iconos_jsx  = temp.map((element, index) => { return(index < Number(cantidad)  ? icono_star : icono_star_off) })
   return(

@@ -79,32 +79,38 @@ registerBlockType('udemy/restaurant-valoracion', { // TODO: cambiar este udemy
       default: '2',
       selector: '.personalizable-value-ph'
     },
+    link_mas: {
+      type: 'string',
+      source: 'text',
+      default: '#',
+      selector: '.link-footer-ph'
+    }
   },
   edit: (props) => {
     const items = [
       {
         cantidad: props.attributes.cantidad,
-        texto: "Cantidad de la comida",
+        texto: "Cantidad de la comida:",
         clase: "restaurant-valoracion__data cantidad-ph"
       },
       {
+        cantidad: props.attributes.calidad,
+        texto: "Calidad de la comida:",
+        clase: "restaurant-valoracion__data calidad-ph"
+      },
+      {
         cantidad: props.attributes.servicio,
-        texto: "Servicio",
+        texto: "Servicio:",
         clase: "restaurant-valoracion__data servicio-ph"
       },
       {
         cantidad: props.attributes.ubicacion,
-        texto: "Ubicación",
+        texto: "Ubicación:",
         clase: "restaurant-valoracion__data ubicacion-ph"
       },
       {
-        cantidad: props.attributes.calidad,
-        texto: "Calidad de la comida",
-        clase: "restaurant-valoracion__data calidad-ph"
-      },
-      {
         cantidad: props.attributes.precio,
-        texto: "Precio",
+        texto: "Precio:",
         clase: "restaurant-valoracion__data precio-ph"
       }
     ]
@@ -155,6 +161,11 @@ registerBlockType('udemy/restaurant-valoracion', { // TODO: cambiar este udemy
             onChange={ personalizable_value => { props.setAttributes({ personalizable_value })}}
             min={0} max={5}
           />
+          <TextControl
+            label={__("Link ver más...", 'restaurant-valorizador')}
+            value={ props.attributes.link_mas }
+            onChange={ link_mas => { props.setAttributes({ link_mas }) } }
+          />
         </PanelBody>
       </InspectorControls>,
       <div className={ props.className }>
@@ -181,18 +192,20 @@ registerBlockType('udemy/restaurant-valoracion', { // TODO: cambiar este udemy
           {
             items.map(item => <Item data_item={item}/>)
           }
-          <ItemPersonalizable
-            data_item={{
-              cantidad: props.attributes.personalizable_value,
-              texto: props.attributes.personalizable_caption,
-              clase_caption: "restaurant-valoracion__data personalizable-caption-ph",
-              clase_value: "restaurant-valoracion__data personalizable-value-ph",
-            }}
-          />
+          {
+            props.attributes.personalizable_caption != '' && <ItemPersonalizable
+              data_item={{
+                cantidad: props.attributes.personalizable_value,
+                texto: props.attributes.personalizable_caption,
+                clase_caption: "restaurant-valoracion__data personalizable-caption-ph",
+                clase_value: "restaurant-valoracion__data personalizable-value-ph",
+              }}
+            />
+          }
           <div class="restaurant-valoracion__footer">
-            <strong>
+            <a href={props.attributes.link_mas}>
               *Conoce el significado de cada puntuación.
-            </strong>
+            </a>
           </div>
         </div>
       </div>
@@ -202,27 +215,27 @@ registerBlockType('udemy/restaurant-valoracion', { // TODO: cambiar este udemy
     const items = [
       {
         cantidad: props.attributes.cantidad,
-        texto: "Cantidad de la comida",
+        texto: "Cantidad de la comida:",
         clase: "restaurant-valoracion__data cantidad-ph"
       },
       {
+        cantidad: props.attributes.calidad,
+        texto: "Calidad de la comida:",
+        clase: "restaurant-valoracion__data calidad-ph"
+      },
+      {
         cantidad: props.attributes.servicio,
-        texto: "Servicio",
+        texto: "Servicio:",
         clase: "restaurant-valoracion__data servicio-ph"
       },
       {
         cantidad: props.attributes.ubicacion,
-        texto: "Ubicación",
+        texto: "Ubicación:",
         clase: "restaurant-valoracion__data ubicacion-ph"
       },
       {
-        cantidad: props.attributes.calidad,
-        texto: "Calidad de la comida",
-        clase: "restaurant-valoracion__data calidad-ph"
-      },
-      {
         cantidad: props.attributes.precio,
-        texto: "Precio",
+        texto: "Precio:",
         clase: "restaurant-valoracion__data precio-ph"
       }
     ]
@@ -237,14 +250,21 @@ registerBlockType('udemy/restaurant-valoracion', { // TODO: cambiar este udemy
           {
             items.map(item => <Item data_item={item}/>)
           }
-          <ItemPersonalizable
-            data_item={{
-              cantidad: props.attributes.personalizable_value,
-              texto: props.attributes.personalizable_caption,
-              clase_caption: "restaurant-valoracion__data personalizable-caption-ph",
-              clase_value: "restaurant-valoracion__data personalizable-value-ph",
-            }}
-          />
+          {
+            props.attributes.personalizable_caption != '' && <ItemPersonalizable
+              data_item={{
+                cantidad: props.attributes.personalizable_value,
+                texto: props.attributes.personalizable_caption,
+                clase_caption: "restaurant-valoracion__data personalizable-caption-ph",
+                clase_value: "restaurant-valoracion__data personalizable-value-ph",
+              }}
+            />
+          }
+          <div class="restaurant-valoracion__footer">
+            <a href={props.attributes.link_mas}>
+              *Conoce el significado de cada puntuación.
+            </a>
+          </div>
         </div>
       </div>
     );
