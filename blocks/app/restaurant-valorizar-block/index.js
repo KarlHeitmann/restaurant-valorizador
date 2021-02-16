@@ -183,7 +183,7 @@ registerBlockType('udemy/restaurant-valoracion', { // TODO: cambiar este udemy
             }}
           />
         </BlockControls>
-        <div class="restaurant-valoracion restaurant-valoracion-v1">
+        <div class="restaurant-valoracion restaurant-valoracion-v2">
           <div class="restaurant-valoracion__titulo">
             <strong>
               🍽 Reseña en un vistazo*
@@ -207,6 +207,11 @@ registerBlockType('udemy/restaurant-valoracion', { // TODO: cambiar este udemy
               *Conoce el significado de cada puntuación.
             </a>
           </div>
+
+        <div class="restaurant-valoracion-v2-right">
+        </div>
+        <div class="restaurant-valoracion-v2-down">
+        </div>
         </div>
       </div>
     ];
@@ -241,7 +246,7 @@ registerBlockType('udemy/restaurant-valoracion', { // TODO: cambiar este udemy
     ]
     return (
       <div className={ `align${props.attributes.block_alignment}`}>
-        <div class="restaurant-valoracion restaurant-valoracion-v1">
+        <div class="restaurant-valoracion restaurant-valoracion-v2">
           <div class="restaurant-valoracion__titulo">
             <strong>
               Reseña en un vistazo*
@@ -265,6 +270,11 @@ registerBlockType('udemy/restaurant-valoracion', { // TODO: cambiar este udemy
               *Conoce el significado de cada puntuación.
             </a>
           </div>
+        </div>
+
+        <div class="restaurant-valoracion-v2-right">
+        </div>
+        <div class="restaurant-valoracion-v2-down">
         </div>
       </div>
     );
