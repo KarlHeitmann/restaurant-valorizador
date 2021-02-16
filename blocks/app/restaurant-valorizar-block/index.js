@@ -79,6 +79,12 @@ registerBlockType('udemy/restaurant-valoracion', { // TODO: cambiar este udemy
       default: '2',
       selector: '.personalizable-value-ph'
     },
+    link_mas: {
+      type: 'string',
+      source: 'text',
+      default: '#',
+      selector: '.link-footer-ph'
+    }
   },
   edit: (props) => {
     const items = [
@@ -155,6 +161,11 @@ registerBlockType('udemy/restaurant-valoracion', { // TODO: cambiar este udemy
             onChange={ personalizable_value => { props.setAttributes({ personalizable_value })}}
             min={0} max={5}
           />
+          <TextControl
+            label={__("Link ver más...", 'restaurant-valorizador')}
+            value={ props.attributes.link_mas }
+            onChange={ link_mas => { props.setAttributes({ link_mas }) } }
+          />
         </PanelBody>
       </InspectorControls>,
       <div className={ props.className }>
@@ -190,9 +201,9 @@ registerBlockType('udemy/restaurant-valoracion', { // TODO: cambiar este udemy
             }}
           />
           <div class="restaurant-valoracion__footer">
-            <strong>
+            <a href={props.attributes.link_mas}>
               *Conoce el significado de cada puntuación.
-            </strong>
+            </a>
           </div>
         </div>
       </div>
@@ -245,6 +256,11 @@ registerBlockType('udemy/restaurant-valoracion', { // TODO: cambiar este udemy
               clase_value: "restaurant-valoracion__data personalizable-value-ph",
             }}
           />
+          <div class="restaurant-valoracion__footer">
+            <a href={props.attributes.link_mas}>
+              *Conoce el significado de cada puntuación.
+            </a>
+          </div>
         </div>
       </div>
     );
