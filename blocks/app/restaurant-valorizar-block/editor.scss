@@ -68,6 +68,8 @@
     @media only screen and (max-width: $bp-small) {
       // font-size: 50%;
       grid-template-columns: minmax(3rem, 1fr);
+      width: auto;
+      justify-items: center;
     }
     // display: flex;
     // align-items: center;
